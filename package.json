@@ -1,0 +1,50 @@
+{
+  "name": "react-lib-hooks",
+  "version": "1.0.1",
+  "description": "Utility for React: Hooks",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+http:s//github.com:newbenhd/npm-opensource-template.git"
+  },
+  "author": "Benjamin Morrison <newben.hd@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.(ts|js)(x)\"",
+    "lint": "tslint -p tsconfig.json",
+    "test": "jest",
+    "test:dev": "jest --watch",
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn test && yarn lint",
+    "preversion": "yarn lint",
+    "version": "yarn format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.18.0",
+    "@babel/preset-typescript": "^7.17.12",
+    "@types/jest": "^27.5.1",
+    "jest": "^28.1.0",
+    "prettier": "^2.6.2",
+    "ts-jest": "^28.0.2",
+    "ts-node": "^10.7.0",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.6.4"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "bugs": {
+    "url": "https://github.com/newbenhd/npm-opensource-template/issues"
+  },
+  "homepage": "https://github.com/newbenhd/npm-opensource-template#readme",
+  "keywords": [
+    "Typescript",
+    "Template",
+    "Open Source",
+    "Node"
+  ]
+}
